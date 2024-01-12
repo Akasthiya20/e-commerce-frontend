@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<head>
+	<script type="Javascript">
+		function validate()
+		{
+			var x=f.un.value;
+			var len=x.length;
+			var val=x.CharCodeAt(0);
+			var p=f.pw.value;
+			var c=f.cpwd.value;
+			var a=f.email.value;
+			var atpos=a.indexOf("@");
+			var dotpos=a.indexOf(".");
+			if(x==""||len<6||x==null){
+				alert("Check username!Username must be mininimum of 6 charcters");
+				return false;
+			}
+			else if(p.length<6||p==""||c.length<6||p!=c){
+				alert(Password should be greater than 6 and it should matches with confirm password);
+				return false;
+			}
+			else if(atpos<6||dotpos<atpos+6||dotpos+2>=a.length){
+				alert("Enter valid email id");
+				return false;
+			}
+			else{
+				alert("Congragulations!!!Successfully registered!")
+			}
+		}
+	</script>
+	<title>
+		Registration Form
+	</title>
+</head>
+<body>
+	<table border="1" align="center">
+		<form name="f" action="success.html" onsubmit="return validate()" method="post">
+			<tr>
+				<td>
+					UserName: 
+				</td>
+				<td>
+					<input type="text" name="un"/>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Password: 
+				</td>
+				<td>
+					<input type="password" name="pw"/>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Confirm Password: 
+				</td>
+				<td>
+					<input type="password" name="cpwd"/>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Email: 
+				</td>
+				<td>
+					<input type="email" name="email"/>
+				</td>
+			</tr>
+		<tr>
+			<td>
+				Submit
+			</td>
+			<td>
+				<input type="Submit" name="Submit"/>
+			</td>
+		</tr>
+		</form>
+	</table> 
+</body>

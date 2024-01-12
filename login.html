@@ -1,0 +1,53 @@
+<html>
+<head>--
+<title>Login Page</title>
+<style >
+	.con1
+	{
+	 vertical-align: 600px;
+	}
+</style>
+</head>
+<body>
+<div =con1>
+<form name="loginForm">
+<table width="40%" height:"50%" bgcolor="0099CC" align="center">
+<tr>
+<td colspan=5><center><font size=8><b> LOGIN </b></font></center></td>
+</tr>
+<tr>
+<td>Username:</td>
+<td><input type="text" size=25 name="userid"></td>
+</tr>
+<tr>
+<td>Password:</td>
+<td><input type="Password" size=25 name="pwd"></td>
+</tr>
+<tr>
+<td ><input type="Reset"></td>
+<td><input type="submit" onclick="return check(this.form)" value="Login"></td>
+</tr>
+<tr>
+<td>
+<a href="register.html">NEED TO CREATE A NEW ACCOUNT</a>
+</td>
+</tr>
+</table>
+</form>
+</div>
+<script language="javascript">
+function check(form)
+{
+if(form.userid.value == "Roseindia" && form.pwd.value == "Roseindia")
+{
+	return true;
+}
+else
+{
+	alert("Error Password or Username")
+	return false;
+}
+}
+</script>
+</body>
+</html>
